@@ -1,0 +1,26 @@
+{
+  "name": "mesh-github-graphql-api",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "buid": "mesh build"
+  },
+  "devDependencies": {
+    "typescript": "4.0.5"
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "0.69.2",
+    "@graphql-mesh/graphql": "0.25.2",
+    "@graphql-mesh/config": "0.36.1",
+    "@graphql-mesh/runtime": "0.34.6",
+    "graphql": "16.0.1"
+  },
+  "resolutions": {
+    "graphql": "16.0.1"
+  },
+  "volta": {
+    "node": "17.4.0",
+    "yarn": "1.22.17"
+  }
+}
