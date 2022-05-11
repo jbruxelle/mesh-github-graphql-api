@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "buid": "mesh build"
+    "build": "mesh build"
   },
   "devDependencies": {
     "typescript": "4.0.5"
