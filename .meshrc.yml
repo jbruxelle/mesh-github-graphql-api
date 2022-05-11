@@ -2,11 +2,14 @@ sources:
   - name: GithubAPI
     handler:
       graphql:
-        schema: './schema.graphql'
-
-# documents:
-#   - ./src/**/*.gql
-
-sdk:
-  generateOperations:
-    selectionSetDepth: 2
+        endpoint: https://api.github.com/graphql
+        schemaHeaders:
+          Authorization: Bearer {env.GITHUB_API_TOKEN}
+        operationHeaders:
+          Authorization: Bearer {env.GITHUB_API_TOKEN}
+        # schema: "./schema.graphql"
+documents:
+  - ./**/*.gql
+# sdk:
+#   generateOperations:
+#     selectionSetDepth: 2

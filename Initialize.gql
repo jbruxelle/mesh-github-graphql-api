@@ -1,0 +1,5 @@
+query Initialize($repository: String!, $owner: String!) {
+  repository(name: $repository, owner: $owner) {
+    id
+  }
+}
