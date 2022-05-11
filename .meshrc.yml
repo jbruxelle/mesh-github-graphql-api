@@ -1,15 +1,25 @@
+# sources:
+#   - name: GithubAPI
+#     handler:
+#       graphql:
+#         endpoint: https://api.github.com/graphql
+#         schemaHeaders:
+#           Authorization: Bearer {env.GITHUB_API_TOKEN}
+#         operationHeaders:
+#           Authorization: Bearer {env.GITHUB_API_TOKEN}
+#         # schema: "./schema.graphql"
+# documents:
+#   - ./**/*.gql
+# # sdk:
+# #   generateOperations:
+# #     selectionSetDepth: 2
+
 sources:
-  - name: GithubAPI
+  - name: GitHub
     handler:
       graphql:
+        introspection: https://docs.github.com/public/schema.docs.graphql
         endpoint: https://api.github.com/graphql
-        schemaHeaders:
-          Authorization: Bearer {env.GITHUB_API_TOKEN}
-        operationHeaders:
-          Authorization: Bearer {env.GITHUB_API_TOKEN}
-        # schema: "./schema.graphql"
+
 documents:
   - ./**/*.gql
-# sdk:
-#   generateOperations:
-#     selectionSetDepth: 2
